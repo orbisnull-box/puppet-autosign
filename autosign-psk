@@ -26,7 +26,7 @@ fi
 echo "autosign $1 with PSK $psk"
 
 psk_file=$PSK_DIR/$certname
-if [ -f "$psk_file" ]; then
+if [ ! -f "$psk_file" ]; then
     psk_file=$PSK_DIR/$PSK_DEFAULT
 fi
 
